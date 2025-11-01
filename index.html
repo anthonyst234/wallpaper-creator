@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Wallpaper Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 
+        This uses the CSS column-count property for a simple, CSS-only masonry-like grid.
+        It's lightweight and avoids complex JavaScript. The `break-inside: avoid` property
+        on the cards prevents them from splitting across columns.
+      */
+      .wallpaper-grid {
+        column-gap: 1.5rem; /* Corresponds to gap-6 */
+      }
+      @media (min-width: 640px) {
+        .wallpaper-grid {
+          column-count: 2;
+        }
+      }
+      @media (min-width: 1024px) {
+        .wallpaper-grid {
+          column-count: 3;
+        }
+      }
+      @media (min-width: 1280px) {
+        .wallpaper-grid {
+          column-count: 4;
+        }
+      }
+       .wallpaper-card {
+        break-inside: avoid;
+        margin-bottom: 1.5rem; /* Corresponds to gap-6 */
+       }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

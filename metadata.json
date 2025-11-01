@@ -1,0 +1,5 @@
+{
+  "name": "wall paper site",
+  "description": "A web application that uses AI to generate unique, high-quality wallpapers based on user prompts. Users can browse, generate, and download custom wallpapers.",
+  "requestFramePermissions": []
+}
